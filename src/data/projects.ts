@@ -1,25 +1,40 @@
+// src/data/projects.ts
+
 export type Project = {
-  slug: string;
+  id: string;
   title: string;
   blurb: string;
-  image?: string;
+  status: "live" | "wip";
+  image?: string; // optional: "/images/card-price-agent.png" (place file in /public/images)
+  repoUrl: string;
+  liveUrl?: string; // live demo link
   tags?: string[];
-  liveUrl?: string;
-  repoUrl?: string;
-  status?: "wip" | "live";
   featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    slug: "card-price",
+    id: "card-price-agent",
     title: "Card Price Agent",
-    blurb: "Estimates today’s value from recent SOLD comps with sources.",
-    image: "/thumbs/card-price.png",
-    tags: ["Next.js", "AgentKit", "Vercel"],
-    liveUrl: "/card-price",
+    blurb:
+      "Search-only demo restricted to trading cards. It queries trusted marketplaces and shows real links.",
+    status: "live",
+    // image: "/images/card-price-agent.png", // uncomment if you add an image to /public/images
     repoUrl: "https://github.com/sherwin25/card-price-agent",
-    status: "wip",
+    liveUrl: "https://card-price-agent.vercel.app/",
+    tags: ["Next.js", "TypeScript", "Vercel", "Agents"],
     featured: true,
   },
+
+  // Add more projects below as you build them…
+  // {
+  //   id: "another-agent",
+  //   title: "Another Agent Project",
+  //   blurb: "Short description of what it does.",
+  //   status: "wip",
+  //   repoUrl: "https://github.com/sherwin25/another-agent",
+  //   liveUrl: "https://surewin-another-agent.vercel.app/",
+  //   tags: ["OpenAI", "AgentKit"],
+  //   featured: false,
+  // },
 ];

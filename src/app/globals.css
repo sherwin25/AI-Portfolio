@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
+/* ---------- Base Color Theme ---------- */
 :root {
-  --background: #ffffff;
+  --background: #fafafa; /* lightened background */
   --foreground: #171717;
 }
 
@@ -14,13 +15,116 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0b0b0b; /* a touch brighter than pure black */
     --foreground: #ededed;
   }
 }
 
+/* ---------- Body ---------- */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+
+/* ---------- Subtle Grid Background ---------- */
+.bg-grid-subtle {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    );
+  background-size: 22px 22px, 22px 22px;
+  background-position: 0 0, 11px 11px;
+}
+
+/* ---------- Panels (reduce empty feel) ---------- */
+.panel {
+  @apply rounded-2xl border border-black/10 dark:border-white/10
+         bg-white/70 dark:bg-neutral-900/60 backdrop-blur p-5;
+}
+
+/* ---------- Floating Glow Animation ---------- */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ---------- Focus & Links ---------- */
+button:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.35);
+}
+a {
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+a:hover {
+  color: #facc15;
+  text-shadow: 0 0 6px rgba(250, 204, 21, 0.35);
+}
+
+/* ---------- Card Hover Shine ---------- */
+.card-hover {
+  position: relative;
+  overflow: hidden;
+}
+.card-hover::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(250, 204, 21, 0.08) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.35s ease, transform 0.9s ease;
+}
+.card-hover:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Dark Mode Tweaks ---------- */
+@media (prefers-color-scheme: dark) {
+  .bg-grid-subtle {
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle at 1px 1px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      );
+  }
+  a:hover {
+    color: #fde047;
+    text-shadow: 0 0 8px rgba(250, 204, 21, 0.35);
+  }
 }
