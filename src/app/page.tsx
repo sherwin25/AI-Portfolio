@@ -106,9 +106,6 @@ export default function Home() {
                 <h2 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
                   Spotlight builds
                 </h2>
-                <p className="text-sm text-slate-500 dark:text-slate-400">
-                  Dialed-in UI polish, live agents, real data integrations.
-                </p>
               </div>
             </div>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -137,11 +134,6 @@ export default function Home() {
           </section>
         )}
       </div>
-
-      <footer className="relative z-10 mx-auto max-w-6xl px-6 pb-12 text-center text-xs text-slate-500 dark:text-slate-500">
-        Built with fast iterations, espresso, and a fondness for shiny UI
-        polish.
-      </footer>
     </main>
   );
 }
