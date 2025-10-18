@@ -7,93 +7,140 @@ export default function Home() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <main className="min-h-screen relative overflow-hidden bg-grid-subtle">
-      {/* Ambient top glow (subtle, static) */}
+    <main className="relative min-h-screen overflow-hidden text-slate-900 dark:text-slate-100">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 -top-40 h-[320px]
-                   bg-[radial-gradient(60%_60%_at_50%_20%,rgba(250,204,21,0.22),transparent_70%)]
-                   blur-2xl"
+        className="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-rose-50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950"
       />
-
-      {/* Hero */}
-      <section className="relative mx-auto max-w-6xl px-6 pt-16 pb-10 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs opacity-80">
-          <span className="inline-block h-2 w-2 rounded-full bg-yellow-400" />
-          Agentic portfolio
-        </span>
-
-        <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
-          Sherwin — <span className="text-yellow-500">AI Projects</span>
-        </h1>
-
-        <p className="mx-auto mt-3 max-w-2xl text-sm md:text-base opacity-85 leading-relaxed">
-          I build focused demos with AI agents and modern web tools. Lots of it
-          is <em>vibe-coded</em>—fast iterations guided by curiosity—then
-          refined into clean, reproducible projects. Click through to try live
-          versions and browse the code.
-        </p>
-
-        <div className="mt-6 flex items-center justify-center gap-3">
-          <a
-            href={
-              featured[0]?.liveUrl ??
-              "https://surewin-card-price-agent.vercel.app/"
-            }
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-black text-white px-4 py-2 text-sm hover:opacity-90 active:scale-[0.99] transition"
-          >
-            View latest live demo
-          </a>
-          <a
-            href="https://github.com/sherwin25"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border px-4 py-2 text-sm hover:bg-white/60 dark:hover:bg-neutral-900/50 active:scale-[0.99] transition"
-          >
-            GitHub
-          </a>
-        </div>
-
-        {/* Shimmer line */}
-        <div className="mx-auto mt-10 h-[2px] w-48 rounded-full bg-gradient-to-r from-transparent via-yellow-400 to-transparent opacity-60" />
-      </section>
-
-      {/* Featured */}
-      {featured.length > 0 && (
-        <section className="relative mx-auto max-w-6xl px-6">
-          <h2 className="text-xl font-semibold mb-3">Featured</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((p) => (
-              <ProjectCard key={p.id} p={p} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Divider */}
-      <div className="mx-auto my-12 h-px max-w-6xl bg-gradient-to-r from-transparent via-black/10 to-transparent dark:via-white/10" />
-
-      {/* All Projects */}
-      {others.length > 0 && (
-        <section className="relative mx-auto max-w-6xl px-6 pb-16">
-          <h2 className="text-xl font-semibold mb-3">All Projects</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {others.map((p) => (
-              <ProjectCard key={p.id} p={p} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Bottom ambient spark */}
+      <div aria-hidden className="aurora-layer" />
+      <div aria-hidden className="aurora-layer aurora-layer--alt" />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-28
-                   bg-[radial-gradient(40%_40%_at_50%_80%,rgba(250,204,21,0.16),transparent_70%)]
-                   animate-float"
+        className="pointer-events-none absolute inset-0 bg-grid-subtle opacity-45 mix-blend-soft-light"
       />
+
+      <div className="relative z-10">
+        <section className="mx-auto max-w-6xl px-6 pt-24 pb-16">
+          <div className="relative overflow-hidden rounded-[3rem] border border-white/50 bg-white/70 p-10 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60">
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-white/40 via-transparent to-white/20" />
+            <div className="relative grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
+              <header className="space-y-5 text-center md:text-left">
+                <span className="inline-flex items-center gap-3 rounded-full bg-sky-100/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.4em] text-sky-600 dark:bg-sky-500/10 dark:text-sky-200">
+                  Portfolio & resume hub
+                </span>
+                <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+                  Sherwin turns vibe-coded ideas into polished{" "}
+                  <span className="text-transparent bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 bg-clip-text">
+                    AI experiences
+                  </span>
+                  that ship.
+                </h1>
+                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base md:mx-0">
+                  This is where the vibe-coded experiments live once they earn a
+                  real shine. I prototype fast, then refine the stack, UX, and deployment
+                  so each project stands up as a professional artifact. Click through to
+                  see the polish, the docs, and the live results.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 md:justify-start">
+                  <a
+                    href={
+                      featured[0]?.liveUrl ??
+                      "https://surewin-card-price-agent.vercel.app/"
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-sky-400 to-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-200/50 transition hover:scale-[1.01] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 dark:shadow-sky-900/40"
+                  >
+                    View latest live demo
+                  </a>
+                  <a
+                    href="https://github.com/sherwin25"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:-translate-y-[1px] hover:border-slate-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-200 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:border-slate-600"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </header>
+
+              <aside className="space-y-4 rounded-[2rem] border border-slate-200/70 bg-white/80 p-6 shadow-inner shadow-sky-100/40 backdrop-blur dark:border-slate-700/60 dark:bg-slate-900/70 dark:shadow-none">
+                <h2 className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">
+                  Snapshot
+                </h2>
+                <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <li>
+                    • Live demos deployed on{" "}
+                    <span className="font-medium text-slate-800 dark:text-slate-100">
+                      Vercel
+                    </span>{" "}
+                    with zero-config deployments
+                  </li>
+                  <li>
+                    • Interfaces built with{" "}
+                    <span className="font-medium text-slate-800 dark:text-slate-100">
+                      Next.js 15 + Tailwind
+                    </span>{" "}
+                    and custom motion flourishes
+                  </li>
+                  <li>
+                    • Agentic flows powered by{" "}
+                    <span className="font-medium text-slate-800 dark:text-slate-100">
+                      OpenAI + durable storage patterns
+                    </span>
+                  </li>
+                  <li>
+                    • “Vibe coding” time boxed, documented, and cleaned up with
+                    readable commits so collaborators can trace the thinking
+                  </li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        {featured.length > 0 && (
+          <section className="mx-auto max-w-6xl px-6">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+                  Spotlight builds
+                </h2>
+                <p className="text-sm text-slate-500 dark:text-slate-400">
+                  Dialed-in UI polish, live agents, real data integrations.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map((p) => (
+                <ProjectCard key={p.id} p={p} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {others.length > 0 && (
+          <section className="mx-auto mt-16 max-w-6xl px-6 pb-20">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <h2 className="text-xl font-semibold text-slate-800 dark:text-slate-100">
+                More experiments
+              </h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Iterations, prototypes, and in-progress ideas worth watching.
+              </p>
+            </div>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {others.map((p) => (
+                <ProjectCard key={p.id} p={p} />
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <footer className="relative z-10 mx-auto max-w-6xl px-6 pb-12 text-center text-xs text-slate-500 dark:text-slate-500">
+        Built with fast iterations, espresso, and a fondness for shiny UI polish.
+      </footer>
     </main>
   );
 }

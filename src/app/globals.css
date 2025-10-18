@@ -28,6 +28,39 @@ body {
   transition: background 0.35s ease, color 0.35s ease;
 }
 
+/* ---------- Slow Aurora Background ---------- */
+@keyframes auroraMove {
+  0% {
+    transform: translate3d(-18%, -12%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(12%, 8%, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(-18%, -12%, 0) scale(1);
+  }
+}
+.aurora-layer {
+  position: absolute;
+  top: -35%;
+  left: -25%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(244, 114, 182, 0.32), transparent 60%),
+    radial-gradient(circle at 40% 80%, rgba(94, 234, 212, 0.28), transparent 65%);
+  filter: blur(140px);
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  animation: auroraMove 38s ease-in-out infinite;
+}
+.aurora-layer--alt {
+  opacity: 0.45;
+  animation-duration: 46s;
+  animation-delay: -18s;
+  transform: scaleX(-1);
+}
+
 /* ---------- Subtle Grid Background ---------- */
 .bg-grid-subtle {
   background-image: radial-gradient(

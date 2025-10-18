@@ -28,11 +28,11 @@ export default function ProjectCard({ p }: { p: Project }) {
     <article
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="relative border rounded-2xl overflow-hidden shadow-sm transition
-                 hover:shadow-lg hover:-translate-y-[2px] bg-white/80 dark:bg-neutral-900/60
-                 before:absolute before:inset-0 before:opacity-0 hover:before:opacity-100
-                 before:transition-opacity before:duration-300 before:rounded-2xl
-                 before:bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(250,204,21,0.25),transparent_60%)]"
+      className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 shadow-sm backdrop-blur-md transition
+                 hover:-translate-y-[3px] hover:shadow-xl dark:border-slate-800/60 dark:bg-slate-900/70
+                 before:absolute before:inset-0 before:rounded-3xl before:opacity-0 before:transition-opacity before:duration-500
+                 before:bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(56,189,248,0.3),transparent_60%)]
+                 hover:before:opacity-100"
     >
       {p.image ? (
         // eslint-disable-next-line @next/next/no-img-element

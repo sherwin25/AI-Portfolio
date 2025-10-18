@@ -25,6 +25,18 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Vercel", "Agents"],
     featured: true,
   },
+  {
+    id: "flashcard-tutor",
+    title: "Flashcard Tutor",
+    blurb:
+      "AI-assisted flashcard generator with local deck storage, import/export, and a polished study UI.",
+    status: "live",
+    // image: "/images/flashcard-tutor.png",
+    repoUrl: "https://github.com/sherwin25/flashcard-tutor",
+    liveUrl: "https://flashcard-tutor.vercel.app/",
+    tags: ["Next.js", "TypeScript", "OpenAI", "Tailwind"],
+    featured: true,
+  },
 
   // Add more projects below as you build them…
   // {
