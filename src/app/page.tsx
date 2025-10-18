@@ -29,17 +29,17 @@ export default function Home() {
                   Portfolio & resume hub
                 </span>
                 <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-                  Sherwin turns vibe-coded ideas into polished{" "}
+                  Vibe-coded ideas into polished{" "}
                   <span className="text-transparent bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 bg-clip-text">
-                    AI experiences
+                    AI experiences.
                   </span>
-                  that ship.
                 </h1>
                 <p className="mx-auto max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base md:mx-0">
                   This is where the vibe-coded experiments live once they earn a
-                  real shine. I prototype fast, then refine the stack, UX, and deployment
-                  so each project stands up as a professional artifact. Click through to
-                  see the polish, the docs, and the live results.
+                  real shine. I prototype fast, then refine the stack, UX, and
+                  deployment so each project stands up as a professional
+                  artifact. Click through to see the polish, the docs, and the
+                  live results.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 md:justify-start">
                   <a
@@ -139,7 +139,8 @@ export default function Home() {
       </div>
 
       <footer className="relative z-10 mx-auto max-w-6xl px-6 pb-12 text-center text-xs text-slate-500 dark:text-slate-500">
-        Built with fast iterations, espresso, and a fondness for shiny UI polish.
+        Built with fast iterations, espresso, and a fondness for shiny UI
+        polish.
       </footer>
     </main>
   );
