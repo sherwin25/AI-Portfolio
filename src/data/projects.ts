@@ -26,6 +26,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "feedback-flow",
+    title: "Smart Feedback Board",
+    blurb:
+      "Full-stack feedback board where AI automatically categorizes and analyzes sentiment of user posts.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/feedback-flow",
+    liveUrl: "https://feedback-flow.vercel.app/",
+    tags: ["Next.js", "Postgres", "OpenAI", "API"],
+    featured: true,
+  },
+  {
     id: "flashcard-tutor",
     title: "Flashcard Tutor",
     blurb:
