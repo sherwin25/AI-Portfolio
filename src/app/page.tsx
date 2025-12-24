@@ -43,21 +43,10 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 md:justify-start">
                   <a
-                    href={
-                      featured[0]?.liveUrl ??
-                      "https://surewin-card-price-agent.vercel.app/"
-                    }
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-sky-400 to-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-200/50 transition hover:scale-[1.01] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 dark:shadow-sky-900/40"
-                  >
-                    View latest live demo
-                  </a>
-                  <a
                     href="https://github.com/sherwin25"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:-translate-y-[1px] hover:border-slate-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-200 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-100 dark:hover:border-slate-600"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-sky-400 to-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-200/50 transition hover:scale-[1.01] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-sky-200 dark:shadow-sky-900/40"
                   >
                     GitHub
                   </a>
