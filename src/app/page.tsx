@@ -11,7 +11,7 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden text-slate-900 dark:text-slate-100">
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-rose-50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950"
+        className="fixed inset-0 bg-gradient-to-br from-sky-50 via-white to-rose-50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950"
       />
       <div aria-hidden className="aurora-layer" />
       <div aria-hidden className="aurora-layer aurora-layer--alt" />
