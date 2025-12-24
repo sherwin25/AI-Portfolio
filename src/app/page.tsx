@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import Spotlight from "@/components/Spotlight";
 
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
@@ -14,6 +15,7 @@ export default function Home() {
       />
       <div aria-hidden className="aurora-layer" />
       <div aria-hidden className="aurora-layer aurora-layer--alt" />
+      <Spotlight />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-grid-subtle opacity-45 mix-blend-soft-light"
