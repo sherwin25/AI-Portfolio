@@ -37,6 +37,17 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "OpenAI", "Tailwind"],
     featured: true,
   },
+  {
+    id: "festive-calendar",
+    title: "Festive Calendar",
+    blurb:
+      "A playful, holiday-themed calendar with interactive confetti effects and month navigation.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/festive-calendar",
+    liveUrl: "https://surewin-festive-calendar.vercel.app/",
+    tags: ["Next.js", "TypeScript", "CSS", "Confetti"],
+    featured: true,
+  },
 
   // Add more projects below as you build them…
   // {
