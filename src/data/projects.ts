@@ -29,10 +29,10 @@ export const projects: Project[] = [
     id: "feedback-flow",
     title: "Smart Feedback Board",
     blurb:
-      "Full-stack CRUD app powered by an Autonomous AI Agent. Features real-time sentiment analysis, auto-categorization, and toxic content filtering using Vercel Postgres.",
+      "Public feedback board where anyone can post ideas. AI Agent automatically categorizes requests, analyzes sentiment, and filters toxic content in real-time.",
     status: "live",
     repoUrl: "https://github.com/sherwin25/feedback-flow",
-    liveUrl: "https://feedback-flow.vercel.app/",
+    liveUrl: "https://surewin-feedback-flow.vercel.app/",
     tags: ["Next.js", "AI Agent", "CRUD", "Postgres"],
     featured: true,
   },
