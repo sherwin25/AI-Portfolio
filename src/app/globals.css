@@ -49,16 +49,26 @@ body {
   background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.35), transparent 55%),
     radial-gradient(circle at 80% 30%, rgba(244, 114, 182, 0.32), transparent 60%),
     radial-gradient(circle at 40% 80%, rgba(94, 234, 212, 0.28), transparent 65%);
-  filter: blur(140px);
+  filter: blur(100px); /* Reduced from 140px for performance */
   opacity: 0.6;
   mix-blend-mode: screen;
+  will-change: transform;
   animation: auroraMove 38s ease-in-out infinite;
+  /* Hardware acceleration hack */
+  transform: translate3d(0, 0, 0);
 }
 .aurora-layer--alt {
   opacity: 0.45;
   animation-duration: 46s;
   animation-delay: -18s;
   transform: scaleX(-1);
+  display: none; /* Hide on mobile by default */
+}
+
+@media (min-width: 768px) {
+  .aurora-layer--alt {
+    display: block; /* Show on tablet/desktop */
+  }
 }
 
 /* ---------- Subtle Grid Background ---------- */

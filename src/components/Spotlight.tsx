@@ -17,8 +17,11 @@ export default function Spotlight() {
       div.style.setProperty("--mouse-y", `${y}px`);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    // Only enable on devices that support hover (mouse) to save performance on touch
+    if (window.matchMedia("(hover: hover)").matches) {
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => window.removeEventListener("mousemove", handleMouseMove);
+    }
   }, []);
 
   return (
