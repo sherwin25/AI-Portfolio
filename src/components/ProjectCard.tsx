@@ -10,6 +10,9 @@ export default function ProjectCard({ p }: { p: Project }) {
 
   // Optional: simple light-follow effect using CSS variables
   function handleMouseMove(e: React.MouseEvent) {
+    // Skip effect on touch devices to improve performance
+    if (window.matchMedia("(hover: none)").matches) return;
+
     const card = cardRef.current;
     if (!card) return;
     const rect = card.getBoundingClientRect();

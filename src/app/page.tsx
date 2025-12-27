@@ -22,7 +22,7 @@ export default function Home() {
       />
 
       <div className="relative z-10">
-        <section className="mx-auto max-w-6xl px-6 pt-24 pb-16">
+        <section className="mx-auto max-w-6xl px-6 pt-32 pb-16">
           <div className="relative overflow-hidden rounded-[3rem] border border-white/50 bg-white/70 p-10 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/60">
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-white/40 via-transparent to-white/20" />
             <div className="relative grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
