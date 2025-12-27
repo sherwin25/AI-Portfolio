@@ -59,6 +59,17 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "CSS", "Confetti"],
     featured: true,
   },
+  {
+    id: "relay-messenger",
+    title: "Relay Messenger",
+    blurb:
+      "Real-time chat application with secure authentication, friend requests, and live messaging powered by Postgres RLS and Supabase Realtime.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/relay-messenger",
+    liveUrl: "https://relay-messenger.vercel.app/",
+    tags: ["Next.js", "Supabase", "Auth", "Realtime"],
+    featured: true,
+  },
 
   // Add more projects below as you build them…
   // {
