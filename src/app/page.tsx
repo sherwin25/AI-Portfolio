@@ -35,7 +35,7 @@ export default function Home() {
                   <span className="block mt-2">builds to validate.</span>
                 </h1>
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg md:mx-0">
-                  I bridge the gap between product vision and engineering reality. I don't just write specs—I "vibe code" working prototypes to test hypotheses, explore new AI capabilities, and understand the technical trade-offs firsthand.
+                  I bridge the gap between product vision and engineering reality. I don&apos;t just write specs—I &quot;vibe code&quot; working prototypes to test hypotheses, explore new AI capabilities, and understand the technical trade-offs firsthand.
                   <br/><br/>
                   From designing <strong>Postgres</strong> schemas to tweaking <strong>Tailwind</strong> micro-interactions, I get my hands dirty to ensure the products we build are feasible, viable, and delightful. This portfolio contains my technical experiments and proofs-of-concept.
                 </p>
@@ -60,13 +60,13 @@ export default function Home() {
                     • <strong>Technical Fluency</strong>: Deep understanding of the stack (Next.js, SQL, Auth) to partner effectively with engineers.
                   </li>
                   <li>
-                    • <strong>Rapid Prototyping</strong>: Turning product requirements into live software to validate "vibe" and feasibility.
+                    • <strong>Rapid Prototyping</strong>: Turning product requirements into live software to validate &quot;vibe&quot; and feasibility.
                   </li>
                   <li>
                     • <strong>AI-Native Product Sense</strong>: Hands-on experience integrating Agents and LLMs into real user flows.
                   </li>
                   <li>
-                    • <strong>Execution Focused</strong>: Moving ideas from "What if" to "Vercel Deployment" in record time.
+                    • <strong>Execution Focused</strong>: Moving ideas from &quot;What if&quot; to &quot;Vercel Deployment&quot; in record time.
                   </li>
                 </ul>
               </aside>
