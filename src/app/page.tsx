@@ -8,7 +8,7 @@ export default function Home() {
   const others = projects.filter((p) => !p.featured);
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden text-slate-900 dark:text-slate-100">
+    <main className="relative min-h-screen text-slate-900 dark:text-slate-100">
       <div
         aria-hidden
         className="fixed inset-0 bg-gradient-to-br from-sky-50 via-white to-rose-50 dark:from-slate-950 dark:via-slate-900 dark:to-emerald-950"

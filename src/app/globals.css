@@ -26,6 +26,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   transition: background 0.35s ease, color 0.35s ease;
+  overflow-x: hidden; /* Prevent horizontal scrollbar on all devices */
 }
 
 /* ---------- Slow Aurora Background ---------- */
