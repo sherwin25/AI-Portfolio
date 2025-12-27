@@ -41,7 +41,7 @@ body {
   }
 }
 .aurora-layer {
-  position: absolute;
+  position: fixed;
   top: -35%;
   left: -25%;
   width: 160%;
