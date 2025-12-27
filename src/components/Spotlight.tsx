@@ -7,14 +7,17 @@ export default function Spotlight() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const div = divRef.current;
-      if (!div) return;
+      // Use requestAnimationFrame to avoid main thread blocking
+      requestAnimationFrame(() => {
+        const div = divRef.current;
+        if (!div) return;
 
-      const x = e.clientX;
-      const y = e.clientY;
+        const x = e.clientX;
+        const y = e.clientY;
 
-      div.style.setProperty("--mouse-x", `${x}px`);
-      div.style.setProperty("--mouse-y", `${y}px`);
+        div.style.setProperty("--mouse-x", `${x}px`);
+        div.style.setProperty("--mouse-y", `${y}px`);
+      });
     };
 
     // Only enable on devices that support hover (mouse) to save performance on touch
