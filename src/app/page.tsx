@@ -31,17 +31,13 @@ export default function Home() {
                   Portfolio & resume hub
                 </span>
                 <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-                  Vibe-coded ideas into polished{" "}
-                  <span className="text-transparent bg-gradient-to-r from-sky-500 via-indigo-500 to-rose-500 bg-clip-text">
-                    AI experiences.
-                  </span>
+                  A <span className="text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 bg-clip-text font-bold">Technical Product Manager</span> who
+                  <span className="block mt-2">builds to validate.</span>
                 </h1>
-                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base md:mx-0">
-                  This is where the vibe-coded experiments live once they earn a
-                  real shine. I prototype fast, then refine the stack, UX, and
-                  deployment so each project stands up as a professional
-                  artifact. Click through to see the polish, the docs, and the
-                  live results.
+                <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300 sm:text-lg md:mx-0">
+                  I bridge the gap between product vision and engineering reality. I don't just write specs—I "vibe code" working prototypes to test hypotheses, explore new AI capabilities, and understand the technical trade-offs firsthand.
+                  <br/><br/>
+                  From designing <strong>Postgres</strong> schemas to tweaking <strong>Tailwind</strong> micro-interactions, I get my hands dirty to ensure the products we build are feasible, viable, and delightful. This portfolio contains my technical experiments and proofs-of-concept.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 md:justify-start">
                   <a
@@ -61,28 +57,16 @@ export default function Home() {
                 </h2>
                 <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
                   <li>
-                    • Live demos deployed on{" "}
-                    <span className="font-medium text-slate-800 dark:text-slate-100">
-                      Vercel
-                    </span>{" "}
-                    with zero-config deployments
+                    • <strong>Technical Fluency</strong>: Deep understanding of the stack (Next.js, SQL, Auth) to partner effectively with engineers.
                   </li>
                   <li>
-                    • Interfaces built with{" "}
-                    <span className="font-medium text-slate-800 dark:text-slate-100">
-                      Next.js 15 + Tailwind
-                    </span>{" "}
-                    and custom motion flourishes
+                    • <strong>Rapid Prototyping</strong>: Turning product requirements into live software to validate "vibe" and feasibility.
                   </li>
                   <li>
-                    • Agentic flows powered by{" "}
-                    <span className="font-medium text-slate-800 dark:text-slate-100">
-                      OpenAI + durable storage patterns
-                    </span>
+                    • <strong>AI-Native Product Sense</strong>: Hands-on experience integrating Agents and LLMs into real user flows.
                   </li>
                   <li>
-                    • “Vibe coding” time boxed, documented, and cleaned up with
-                    readable commits so collaborators can trace the thinking
+                    • <strong>Execution Focused</strong>: Moving ideas from "What if" to "Vercel Deployment" in record time.
                   </li>
                 </ul>
               </aside>
