@@ -14,6 +14,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "auto-spec-agent",
+    title: "Auto-Spec Agent",
+    blurb:
+      "AI Product Manager that instantly turns feature ideas into technical specs with SQL schemas, user stories, and Mermaid ER diagrams.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/auto-spec-agent",
+    liveUrl: "https://auto-spec-agent.vercel.app/",
+    tags: ["Next.js", "OpenAI", "Supabase", "Mermaid.js"],
+    featured: true,
+  },
+  {
     id: "relay-messenger",
     title: "Relay Messenger",
     blurb:
