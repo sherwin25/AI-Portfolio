@@ -14,6 +14,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "enterprise-platform",
+    title: "Enterprise Multi-Tenant Platform",
+    blurb:
+      "Infrastructure-as-Code solution that automates Kubernetes tenant provisioning with strict quotas, RBAC, and governance policies using Terraform and OpenShift.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/enterprise-platform-demo",
+    liveUrl: "https://enterprise-platform-demo.vercel.app/",
+    tags: ["Terraform", "Kubernetes", "OpenShift", "Governance"],
+    featured: true,
+  },
+  {
     id: "auto-spec-agent",
     title: "Auto-Spec Agent",
     blurb:
