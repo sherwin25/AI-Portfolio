@@ -14,15 +14,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "card-price-agent",
-    title: "Card Price Agent",
+    id: "relay-messenger",
+    title: "Relay Messenger",
     blurb:
-      "Search-only demo restricted to trading cards. It queries trusted marketplaces and shows real links.",
+      "Real-time chat application with secure authentication, friend requests, and live messaging powered by Postgres RLS and Supabase Realtime.",
     status: "live",
-    // image: "/images/card-price-agent.png", // uncomment if you add an image to /public/images
-    repoUrl: "https://github.com/sherwin25/card-price-agent",
-    liveUrl: "https://card-price-agent.vercel.app/",
-    tags: ["Next.js", "TypeScript", "Vercel", "Agents"],
+    repoUrl: "https://github.com/sherwin25/relay-messenger",
+    liveUrl: "https://relay-messenger.vercel.app/",
+    tags: ["Next.js", "Supabase", "Auth", "Realtime"],
     featured: true,
   },
   {
@@ -34,6 +33,18 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/sherwin25/feedback-flow",
     liveUrl: "https://surewin-feedback-flow.vercel.app/",
     tags: ["Next.js", "AI Agent", "CRUD", "Postgres"],
+    featured: true,
+  },
+  {
+    id: "card-price-agent",
+    title: "Card Price Agent",
+    blurb:
+      "Search-only demo restricted to trading cards. It queries trusted marketplaces and shows real links.",
+    status: "live",
+    // image: "/images/card-price-agent.png", // uncomment if you add an image to /public/images
+    repoUrl: "https://github.com/sherwin25/card-price-agent",
+    liveUrl: "https://card-price-agent.vercel.app/",
+    tags: ["Next.js", "TypeScript", "Vercel", "Agents"],
     featured: true,
   },
   {
@@ -57,17 +68,6 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/sherwin25/festive-calendar",
     liveUrl: "https://surewin-festive-calendar.vercel.app/",
     tags: ["Next.js", "TypeScript", "CSS", "Confetti"],
-    featured: true,
-  },
-  {
-    id: "relay-messenger",
-    title: "Relay Messenger",
-    blurb:
-      "Real-time chat application with secure authentication, friend requests, and live messaging powered by Postgres RLS and Supabase Realtime.",
-    status: "live",
-    repoUrl: "https://github.com/sherwin25/relay-messenger",
-    liveUrl: "https://relay-messenger.vercel.app/",
-    tags: ["Next.js", "Supabase", "Auth", "Realtime"],
     featured: true,
   },
 
