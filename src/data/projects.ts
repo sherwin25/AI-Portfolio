@@ -88,8 +88,18 @@ export const projects: Project[] = [
       "A playful, holiday-themed calendar with interactive confetti effects and month navigation.",
     status: "live",
     repoUrl: "https://github.com/sherwin25/festive-calendar",
-    liveUrl: "https://surewin-festive-calendar.vercel.app/",
     tags: ["Next.js", "TypeScript", "CSS", "Confetti"],
+    featured: true,
+  },
+  {
+    id: "prioritization-poker",
+    title: "Prioritization Poker",
+    blurb:
+      "Real-time consensus tool for product teams. Stakeholders join a lobby with a code and vote on feature impact/effort simultaneously.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/Prioritization-Poker",
+    liveUrl: "https://prioritization-poker.vercel.app/",
+    tags: ["Next.js", "Supabase", "Realtime", "Tailwind"],
     featured: true,
   },
 
