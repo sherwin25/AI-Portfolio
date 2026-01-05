@@ -14,6 +14,17 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "prioritization-poker",
+    title: "Prioritization Poker",
+    blurb:
+      "A consensus-building tool that gamifies the estimation process to test core PM fundamentals. It facilitates real-time debates on feature complexity using the Fibonacci sequence to uncover alignment gaps.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/Prioritization-Poker",
+    liveUrl: "https://prioritization-poker.vercel.app/",
+    tags: ["Next.js", "Supabase", "Realtime", "Tailwind"],
+    featured: true,
+  },
+  {
     id: "enterprise-platform",
     title: "Enterprise Multi-Tenant Platform",
     blurb:
@@ -91,17 +102,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "CSS", "Confetti"],
     featured: true,
   },
-  {
-    id: "prioritization-poker",
-    title: "Prioritization Poker",
-    blurb:
-      "Real-time consensus tool for product teams. Stakeholders join a lobby with a code and vote on feature impact/effort simultaneously.",
-    status: "live",
-    repoUrl: "https://github.com/sherwin25/Prioritization-Poker",
-    liveUrl: "https://prioritization-poker.vercel.app/",
-    tags: ["Next.js", "Supabase", "Realtime", "Tailwind"],
-    featured: true,
-  },
+
 
   // Add more projects below as you build them…
   // {
