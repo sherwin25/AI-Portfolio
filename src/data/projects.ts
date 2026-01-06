@@ -25,6 +25,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: "feature-flag-dashboard",
+    title: "Feature Flag Dashboard",
+    blurb:
+      "A PM toolkit for managing controlled rollouts and A/B experiments. Demonstrates understanding of gradual releases, risk mitigation, and targeting strategies — key skills for technical product managers.",
+    status: "live",
+    repoUrl: "https://github.com/sherwin25/feature-flag-dashboard",
+    liveUrl: "https://surewin-feature-flag-dashboard.vercel.app/",
+    tags: ["Next.js", "localStorage", "Feature Flags", "Tailwind"],
+    featured: true,
+  },
+  {
     id: "enterprise-platform",
     title: "Enterprise Multi-Tenant Platform",
     blurb:
