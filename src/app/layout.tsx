@@ -13,8 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sherwin | AI Technical Product Manager",
-  description: "A portfolio of AI-native applications and full-stack experiments built to validate ideas.",
+  metadataBase: new URL("https://surewin-ai-portfolio.vercel.app"),
+  title: {
+    default: "Portfolio & Resume Hub | Sherwin",
+    template: "%s",
+  },
+  description:
+    "Technical Product Manager portfolio focused on rapid prototyping, AI-native workflows, and hands-on product execution.",
+  openGraph: {
+    title: "Portfolio & Resume Hub | Sherwin",
+    description:
+      "Technical Product Manager portfolio focused on rapid prototyping, AI-native workflows, and hands-on product execution.",
+    url: "https://surewin-ai-portfolio.vercel.app",
+    siteName: "Sherwin Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio & Resume Hub | Sherwin",
+    description:
+      "Technical Product Manager portfolio focused on rapid prototyping, AI-native workflows, and hands-on product execution.",
+  },
 };
 
 export default function RootLayout({

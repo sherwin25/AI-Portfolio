@@ -1,77 +1,57 @@
 // src/components/ProjectCard.tsx
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/data/projects";
-import { useRef } from "react";
 
 export default function ProjectCard({ p }: { p: Project }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  // Optional: simple light-follow effect using CSS variables
-  function handleMouseMove(e: React.MouseEvent) {
-    // Skip effect on touch devices to improve performance
-    if (window.matchMedia("(hover: none)").matches) return;
-
-    const card = cardRef.current;
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty("--x", `${x}px`);
-    card.style.setProperty("--y", `${y}px`);
-  }
-
-  const badge =
-    p.status === "live"
-      ? "bg-green-100 text-green-800"
-      : "bg-yellow-100 text-yellow-800";
+  const badge = p.status === "live" ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-800";
+  const badgeLabel = p.status === "live" ? "Live" : "WIP";
 
   return (
     <article
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      className="relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/80 shadow-sm backdrop-blur-md transition
-                 hover:-translate-y-[3px] hover:shadow-xl dark:border-slate-800/60 dark:bg-slate-900/70
-                 before:absolute before:inset-0 before:rounded-3xl before:opacity-0 before:transition-opacity before:duration-500
-                 before:bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(56,189,248,0.3),transparent_60%)]
-                 hover:before:opacity-100"
+      className="h-full overflow-hidden rounded-3xl border border-slate-200/80 bg-white/90 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/75"
     >
       {p.image ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={p.image} alt={p.title} className="w-full h-40 object-cover" />
+        <Image
+          src={p.image}
+          alt={`${p.title} preview`}
+          width={1200}
+          height={630}
+          className="h-40 w-full object-cover"
+        />
       ) : null}
 
-      <div className="p-4 relative z-10">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-lg font-semibold">{p.title}</h3>
-          <span className={`text-xs px-2 py-1 rounded ${badge}`}>
-            {p.status === "live" ? "live" : "wip"}
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{p.title}</h3>
+          <span className={`rounded-full px-2.5 py-1 text-xs font-semibold ${badge}`}>
+            {badgeLabel}
           </span>
         </div>
 
-        <p className="opacity-80 text-sm mb-3">{p.blurb}</p>
+        <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{p.blurb}</p>
 
         {p.tags?.length ? (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${p.title} technologies`}>
             {p.tags.map((t) => (
-              <span
+              <li
                 key={t}
-                className="text-xs bg-gray-100 dark:bg-gray-800 rounded px-2 py-0.5"
+                className="rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-200"
               >
                 {t}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
         ) : null}
 
-        <div className="flex gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {p.liveUrl ? (
             <a
               href={p.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-sm px-3 py-2 rounded bg-black text-white hover:opacity-90 transition"
+              aria-label={`Open live demo for ${p.title} in a new tab`}
+              className="rounded-lg border border-sky-600 bg-sky-600 px-3 py-2 text-sm font-medium text-white transition hover:bg-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 dark:border-sky-500 dark:bg-sky-500 dark:text-slate-950 dark:hover:bg-sky-400"
             >
               Live demo
             </a>
@@ -81,7 +61,8 @@ export default function ProjectCard({ p }: { p: Project }) {
             href={p.repoUrl}
             target="_blank"
             rel="noreferrer"
-            className="text-sm px-3 py-2 rounded border hover:bg-gray-50 dark:hover:bg-neutral-800 transition"
+            aria-label={`Open repository for ${p.title} in a new tab`}
+            className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
           >
             Repo
           </Link>

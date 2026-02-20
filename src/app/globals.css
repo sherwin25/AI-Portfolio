@@ -114,16 +114,13 @@ body {
 
 /* ---------- Focus & Links ---------- */
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+a:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.35);
 }
 a {
-  transition: color 0.25s ease, text-shadow 0.25s ease;
-}
-a:hover {
-  color: #facc15;
-  text-shadow: 0 0 6px rgba(250, 204, 21, 0.35);
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 /* ---------- Card Hover Shine ---------- */
@@ -165,9 +162,5 @@ a:hover {
         rgba(255, 255, 255, 0.03) 1px,
         transparent 1px
       );
-  }
-  a:hover {
-    color: #fde047;
-    text-shadow: 0 0 8px rgba(250, 204, 21, 0.35);
   }
 }
